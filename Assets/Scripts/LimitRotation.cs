@@ -2,30 +2,25 @@ using UnityEngine;
 
 public class LimitRotation : MonoBehaviour
 {
-    public Transform target; // L'oggetto a cui vuoi confrontare la rotazione
-    public float maxAngle = 45f; // Angolo massimo consentito in gradi
+    public float rotationSpeed = 100f; // Velocità di rotazione in gradi al secondo
+    public float minAngle = -45f; // Angolo minimo consentito
+    public float maxAngle = 45f; // Angolo massimo consentito
+    public Vector3 MovementDirection = Vector3.zero;
+
+    private float currentRotation = 0f; // Angolo corrente
 
     void Update()
     {
-        // Ottieni la rotazione corrente del tuo oggetto (ad esempio, della fotocamera o di un altro oggetto)
-        Quaternion currentRotation = transform.rotation;
+        // Calcola la nuova rotazione
+        float rotation = rotationSpeed * Time.deltaTime * Input.GetAxis("Mouse X");
 
-        // Calcola il prodotto scalare tra le due rotazioni
-        float dot = Quaternion.Dot(currentRotation, target.rotation);
+        // Aggiungi la rotazione alla rotazione corrente
+        currentRotation += rotation;
 
-        // Calcola l'angolo tra le due rotazioni usando il prodotto scalare
-        float angle = Mathf.Acos(dot) * 2f * Mathf.Rad2Deg;
+        // Limita l'angolo tra minAngle e maxAngle
+        currentRotation = Mathf.Clamp(currentRotation, minAngle, maxAngle);
 
-        // Verifica se l'angolo è maggiore del limite
-        if (angle > maxAngle)
-        {
-            Debug.Log("Rotazione troppo grande, fermati!");
-            // Puoi qui gestire cosa fare se l'angolo è troppo grande (ad esempio, fermare la rotazione)
-        }
-        else
-        {
-            Debug.Log("Rotazione consentita");
-            // Procedi con la rotazione
-        }
+        // Ruota l'oggetto solo attorno all'asse Z
+        transform.rotation = Quaternion.Euler(currentRotation * MovementDirection);
     }
 }
