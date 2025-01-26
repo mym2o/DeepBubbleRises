@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WallsList
   - Enemy
+  - ChargingBubble
   layers:
   - Default
   - TransparentFX

@@ -8,10 +8,11 @@ public class LoadBubbleSprint : MonoBehaviour
     public float multiplier = 1f;
     public float maxDuration = 5f;
 
+    public AudioSource audioSource; // Componente AudioSource per il suono
+
     private Vector3 initialScale;  // Scala iniziale dell'oggetto
     private bool isPressing = false; // Indica se il tasto è premuto
     private float pressDuration;
-
     private Vector3 sprintDirection;
 
     void Start()
@@ -22,6 +23,12 @@ public class LoadBubbleSprint : MonoBehaviour
             initialScale = targetObject.transform.localScale;
         }
         sprintDirection = Vector3.zero;
+
+        // Controlla se l'AudioSource è stato assegnato
+        if (audioSource == null)
+        {
+            Debug.LogWarning("AudioSource non assegnato!");
+        }
     }
 
     void Update()
@@ -61,6 +68,12 @@ public class LoadBubbleSprint : MonoBehaviour
             targetObject.transform.localScale = initialScale;
 
             sprintDirection = transform.up;
+
+            // Riproduci il suono
+            if (audioSource != null)
+            {
+                audioSource.Play();
+            }
         }
     }
 }
