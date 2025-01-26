@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     private Rigidbody playerRb;
     private LoadBubbleSprint loadBubbleSprint;
     private LimitRotation limitRotation;
+    private BubbleShrink bubbleShrink;
 
     private void Awake()
     {
@@ -16,7 +17,9 @@ public class UIManager : MonoBehaviour
         playerRb = player.GetComponent<Rigidbody>();
         loadBubbleSprint = player.GetComponent<LoadBubbleSprint>();
         limitRotation = player.GetComponent<LimitRotation>();
+        bubbleShrink = player.GetComponent<BubbleShrink>();
 
+        bubbleShrink.shrinkRate = 0f;
         playerGravity.buoyancyForce = 0f;
         playerRb.useGravity = false;
         loadBubbleSprint.enabled = false;
@@ -39,6 +42,7 @@ public class UIManager : MonoBehaviour
         loadBubbleSprint.enabled = true;
         playerRb.useGravity = true;
         playerGravity.buoyancyForce = 10f;
+        bubbleShrink.shrinkRate = 0.01f;
         panel.SetActive(false);
     }
 }
