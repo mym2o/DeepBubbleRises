@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BubbleUnlit
+  m_Name: BubbleSprintUnlit
   m_Shader: {fileID: -6465566751694194690, guid: 43488fd2d25d2fb48a3f1fd7bccf063b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -106,7 +106,7 @@ Material:
     - _DstBlend: 10
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _Fresnel_Power: 0.6
+    - _Fresnel_Power: 5
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
