@@ -4,6 +4,7 @@ public class UIManager : MonoBehaviour
 {
     public GameObject panel;
     public GameObject player;
+    public GameObject points;
 
     private PlayerGravity playerGravity;
     private Rigidbody playerRb;
@@ -24,6 +25,8 @@ public class UIManager : MonoBehaviour
         playerRb.useGravity = false;
         loadBubbleSprint.enabled = false;
         limitRotation.enabled = false;
+
+        points.SetActive(false);
     }
 
     public void QuitGame()
@@ -44,5 +47,6 @@ public class UIManager : MonoBehaviour
         playerGravity.buoyancyForce = 10f;
         bubbleShrink.shrinkRate = 0.01f;
         panel.SetActive(false);
+        points.SetActive(true);
     }
 }
