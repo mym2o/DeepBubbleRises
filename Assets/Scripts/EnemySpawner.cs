@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     public float spawnHeightAboveBubble = 5f;
     public float spawnRateDecrease = 0.5f; // Quantità di riduzione della frequenza ogni minuto
     public float minimumSpawnRate = 0.5f; // Frequenza minima consentita
+    public GameObject player;
 
     private float timeSinceLastSpawn = 0f;
     private float timeElapsed = 0f; // Tempo totale trascorso
@@ -55,7 +56,7 @@ public class EnemySpawner : MonoBehaviour
 
         // Calcola la posizione di spawn
         float spawnX = fromRight ? spawnOffset : -spawnOffset;
-        float spawnY = transform.position.y + spawnHeightAboveBubble + Random.Range(0f, 5f); // Fisso sopra la bolla + intervallo aggiuntivo
+        float spawnY = player.transform.position.y + spawnHeightAboveBubble + Random.Range(0f, 5f); // Fisso sopra la bolla + intervallo aggiuntivo
 
         Vector3 spawnPosition = new Vector3(spawnX, spawnY, 0);
 
