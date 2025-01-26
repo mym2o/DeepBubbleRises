@@ -8,6 +8,8 @@ public class BubbleShrink : MonoBehaviour
     public float minScale = 0.2f; // Dimensione minima prima di distruggere la bolla
     public AudioSource audioSource; // Componente AudioSource per il suono
 
+    private bool isExploded = false;
+
     private void Start()
     {
         // Controlla se l'AudioSource è stato assegnato
@@ -23,8 +25,9 @@ public class BubbleShrink : MonoBehaviour
         transform.localScale -= Vector3.one * shrinkRate * Time.deltaTime;
 
         // Distruggi la bolla se raggiunge la dimensione minima
-        if (transform.localScale.x <= minScale || transform.localScale.y <= minScale || transform.localScale.z <= minScale)
+        if (!isExploded && (transform.localScale.x <= minScale || transform.localScale.y <= minScale || transform.localScale.z <= minScale))
         {
+            isExploded = true;
             // Riproduci il suono
             if (audioSource != null && audioSource.clip != null)
             {
