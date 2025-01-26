@@ -39,16 +39,7 @@ public class BubbleController : MonoBehaviour
 
         // Aggiungi la rotazione, ma mantieni gli angoli limitati
         Vector3 currentEulerAngles = transform.eulerAngles;
-        currentEulerAngles.x += rotationX;
-
-        // Converti l'angolo in un range tra -180 e 180 gradi
-        if (currentEulerAngles.x > 180) currentEulerAngles.x -= 360;
-
-        // Limita la rotazione tra -90° e +90°
-        currentEulerAngles.x = Mathf.Clamp(currentEulerAngles.x, -90f, 90f);
-
-        // Applica la nuova rotazione limitata
-        transform.eulerAngles = currentEulerAngles;
+        currentEulerAngles.z += rotationX;
 
         Debug.DrawRay(transform.position, transform.forward * 100, Color.red);
     }
