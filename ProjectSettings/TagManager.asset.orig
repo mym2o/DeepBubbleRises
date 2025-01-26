@@ -6,8 +6,11 @@ TagManager:
   tags:
   - WallsList
   - Enemy
+<<<<<<< HEAD
   - UI
+=======
   - ChargingBubble
+>>>>>>> 97e10a877fb718a66a92668932bae43ff413f912
   layers:
   - Default
   - TransparentFX

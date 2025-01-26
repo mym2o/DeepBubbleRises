@@ -295,25 +295,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588306308}
   m_CullTransparentMesh: 1
---- !u!1 &678275037 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 448740212777121497, guid: efd40716264c8e7409e773e52e02c06a, type: 3}
+--- !u!114 &678275040 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5077893635659623655, guid: efd40716264c8e7409e773e52e02c06a, type: 3}
   m_PrefabInstance: {fileID: 1600011516}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &678275040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678275037}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 123c1434cd3438b4187c16f5b3fc46f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1413551952}
-  player: {fileID: 1375220849}
 --- !u!1001 &803310059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -495,10 +487,6 @@ PrefabInstance:
     - target: {fileID: 758318317616894937, guid: 19a89d09765581e4cbbb9dd5fae2edab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6332211464844202826, guid: 19a89d09765581e4cbbb9dd5fae2edab, type: 3}
-      propertyPath: explosionPS
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8580827925010814359, guid: 19a89d09765581e4cbbb9dd5fae2edab, type: 3}
       propertyPath: m_Name
@@ -897,14 +885,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5865520270180236577, guid: 6449fbd5e05a60e4c80e21b7b7abb168, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1375220849}
     - target: {fileID: 6508327275264632633, guid: 6449fbd5e05a60e4c80e21b7b7abb168, type: 3}
       propertyPath: m_Name
       value: EnemySpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 7654256795392539315, guid: 6449fbd5e05a60e4c80e21b7b7abb168, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1375220849}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1279,13 +1267,18 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1375220849}
+    - target: {fileID: 5077893635659623655, guid: efd40716264c8e7409e773e52e02c06a, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1413551952}
+    - target: {fileID: 5077893635659623655, guid: efd40716264c8e7409e773e52e02c06a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1375220849}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 448740212777121497, guid: efd40716264c8e7409e773e52e02c06a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 678275040}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efd40716264c8e7409e773e52e02c06a, type: 3}
 --- !u!1 &2050342268
 GameObject:
