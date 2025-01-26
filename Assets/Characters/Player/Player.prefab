@@ -213,7 +213,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -306,7 +306,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7596162713024372626}
-  - {fileID: 4240878007437276221}
   - {fileID: 8983516909207012537}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -322,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da2760d0cf13394e8cc4ce74c210872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPS: {fileID: 2178679061449118172}
+  explosionPS: {fileID: 0}
   meshGo: {fileID: 2467318042034777170}
 --- !u!114 &4250382515727955448
 MonoBehaviour:
@@ -418,74 +417,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1001 &3085801160904021105
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 758318317616894937}
-    m_Modifications:
-    - target: {fileID: 1155269899748941900, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1155269899748941900, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1155269899748941900, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1155269899748941900, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1155269899748941900, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1155269899748941900, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1155269899748941900, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1155269899748941900, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1155269899748941900, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1155269899748941900, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3814213388556141997, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
-      propertyPath: m_Name
-      value: BubbleExplosion
-      objectReference: {fileID: 0}
-    - target: {fileID: 3814213388556141997, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
---- !u!1 &2178679061449118172 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3814213388556141997, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
-  m_PrefabInstance: {fileID: 3085801160904021105}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &4240878007437276221 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1155269899748941900, guid: 2aa0a92111892a943a747f40190662dc, type: 3}
-  m_PrefabInstance: {fileID: 3085801160904021105}
-  m_PrefabAsset: {fileID: 0}
