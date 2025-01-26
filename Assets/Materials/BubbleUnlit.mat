@@ -23,7 +23,8 @@ Material:
   disabledShaderPasses:
   - MOTIONVECTORS
   - DepthOnly
-  m_LockedProperties: 
+  m_LockedProperties: _Add_Alpha _Blend_Opacity _Blend_Sharpness _Divide_Color _Fresnel_Power
+    _Noise_Substraction
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
