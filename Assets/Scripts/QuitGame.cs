@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject canvas;
+    public GameObject panel;
     public GameObject player;
 
     private PlayerGravity playerGravity;
@@ -39,6 +39,6 @@ public class UIManager : MonoBehaviour
         loadBubbleSprint.enabled = true;
         playerRb.useGravity = true;
         playerGravity.buoyancyForce = 10f;
-        canvas.SetActive(false);
+        panel.SetActive(false);
     }
 }
