@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class BubbleBehaviour : MonoBehaviour
+public class PlayerGravity : MonoBehaviour
 {
     public float buoyancyForce = 10f; // Forza di galleggiamento
+
     private Rigidbody rb;
 
     void Start()
