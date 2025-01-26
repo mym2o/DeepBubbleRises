@@ -13,7 +13,7 @@ public class PlayerGravity : MonoBehaviour
         {
             rb = gameObject.AddComponent<Rigidbody>();
         }
-        rb.useGravity = true;
+        //rb.useGravity = true;
         rb.linearDamping = 2f;
         rb.angularDamping = 2f;
     }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WallsList
   - Enemy
+  - UI
   - ChargingBubble
   layers:
   - Default
