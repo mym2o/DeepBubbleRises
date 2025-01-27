@@ -37,9 +37,9 @@ This project was developed by a passionate team during a 48-hour game jam. Our g
 5. Aim your movement by adjusting the **mouse position** before releasing the Spacebar.
 
 ## Installation
-1. Download the latest release from the [Releases](#) section.
+1. Download the latest release from the [Releases](https://ggjv4.s3.us-west-1.amazonaws.com/files/games/2025/842069/exec/Deep%20Bubble%20Rises%20(2).zip?VersionId=9WXlmHWKjr_Bc2CuX_nMCDnaW9LbIeDV) section.
 2. Extract the files.
-3. Run `DeepBubbleRises.exe` to play.
+3. Run `GGJ2025.exe` to play.
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](#) file for more information.
