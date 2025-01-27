@@ -19,7 +19,7 @@
 **Deep Bubble Rises** won the **"Best Gameplay" award** at the Global Game Jam 2025, with the jury consisting of industry experts in gaming, 3D modeling, game journalism, and audio design.
 
 ## Screenshots
-*Coming soon...*
+![Screenshot](/dbr-screenshot.png?raw=true "Deep Bubble Rises")
 
 ## Development
 This project was developed by a passionate team during a 48-hour game jam. Our goal was to create an engaging and visually stunning game that challenges players with strategic gameplay mechanics.
