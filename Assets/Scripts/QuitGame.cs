@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject panel;
+    public GameObject panelMenu;
+    public GameObject panelCredits;
     public GameObject player;
     public GameObject points;
 
@@ -26,6 +27,7 @@ public class UIManager : MonoBehaviour
         loadBubbleSprint.enabled = false;
         limitRotation.enabled = false;
 
+        panelCredits.SetActive(false);
         points.SetActive(false);
     }
 
@@ -46,7 +48,19 @@ public class UIManager : MonoBehaviour
         playerRb.useGravity = true;
         playerGravity.buoyancyForce = 10f;
         bubbleShrink.shrinkRate = 0.01f;
-        panel.SetActive(false);
+        panelMenu.SetActive(false);
         points.SetActive(true);
+    }
+
+    public void ShowCredits()
+    {
+        panelCredits.SetActive(true);
+        panelMenu.SetActive(false);
+    }
+
+    public void BackToMenu()
+    {
+        panelCredits.SetActive(false);
+        panelMenu.SetActive(true);
     }
 }
