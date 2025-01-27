@@ -1,0 +1,52 @@
+using UnityEngine;
+using System;
+using UnityEngine.SceneManagement;
+using System.Collections;
+
+public class CollideWithEnemy : MonoBehaviour
+{
+    public BackgroundMusic backgroundMusic;
+<<<<<<< HEAD
+    public GameObject particleSystem;
+
+    private GameObject playerToDestroy;
+=======
+    public AudioSource audioSource; // Componente AudioSource per il suono
+>>>>>>> 97e10a877fb718a66a92668932bae43ff413f912
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") && other.GetComponent<SphereCollider>() != null)
+        {
+<<<<<<< HEAD
+            playerToDestroy = other.gameObject.transform.parent.gameObject;
+            GameObject instantiated = GameObject.Instantiate(particleSystem, playerToDestroy.transform);
+            instantiated.transform.SetParent(null);
+
+            playerToDestroy.SetActive(false);
+        }
+    }
+=======
+            // Riproduci il suono
+            if (audioSource != null && audioSource.clip != null)
+            {
+                audioSource.Play();
+            }
+
+            // Distruggi il player
+            Destroy(other.gameObject);
+
+            // Ritarda la ricarica della scena per la durata del suono
+            float audioDuration = audioSource.clip.length;
+            Invoke("ReloadScene", audioDuration); // Ritarda la ricarica della scena per la durata del suono
+        }
+    }
+
+    void ReloadScene()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
+
+>>>>>>> 97e10a877fb718a66a92668932bae43ff413f912
+}
