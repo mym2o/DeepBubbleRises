@@ -41,6 +41,9 @@ This project was developed by a passionate team during a 48-hour game jam. Our g
 2. Extract the files.
 3. Run `GGJ2025.exe` to play.
 
+## Browser Playable Version
+[Game Link](https://mym2olab.altervista.org/DeepBubbleRises/)
+
 ## License
 This project is licensed under the MIT License. See the [LICENSE](#) file for more information.
 
