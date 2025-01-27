@@ -41,9 +41,6 @@ This project was developed by a passionate team during a 48-hour game jam. Our g
 2. Extract the files.
 3. Run `DeepBubbleRises.exe` to play.
 
-## Contributing
-We welcome feedback and contributions! Feel free to fork this repository and submit a pull request. Please refer to our [contributing guidelines](#) for more details.
-
 ## License
 This project is licensed under the MIT License. See the [LICENSE](#) file for more information.
 
