@@ -5,7 +5,9 @@ using System.Collections;
 public class BubbleShrink : MonoBehaviour
 {
     public float shrinkRate = 0.1f; // Velocità con cui la bolla si restringe (unità per secondo)
-    public float minScale = 0.2f; // Dimensione minima prima di distruggere la bolla
+    public float minScale = 0.1f; // Dimensione minima prima di distruggere la bolla
+    public float shrinkRateDecrease = 0.01f; // Quantità di diminuzione del shrinkRate
+    public float decreaseInterval = 1f; // Intervallo di tempo (in secondi) per diminuire il shrinkRate
     public AudioSource audioSource; // Componente AudioSource per il suono
 
     private bool isExploded = false;
@@ -17,6 +19,7 @@ public class BubbleShrink : MonoBehaviour
         {
             Debug.LogWarning("AudioSource non assegnato!");
         }
+        StartCoroutine(DecreaseShrinkRate());
     }
 
     void Update()
@@ -31,12 +34,21 @@ public class BubbleShrink : MonoBehaviour
             // Riproduci il suono
             if (audioSource != null && audioSource.clip != null)
             {
-                Debug.Log("Here");
                 audioSource.Play();
             }
 
             // Usa una coroutine per distruggere la bolla e ricaricare la scena
             StartCoroutine(DestroyBubbleAfterSound());
+        }
+    }
+
+    // Coroutine per diminuire il shrinkRate ogni tot secondi
+    IEnumerator DecreaseShrinkRate()
+    {
+        while (shrinkRate > 0) // Continua finché shrinkRate è maggiore di 0
+        {
+            yield return new WaitForSeconds(decreaseInterval); // Attendi l'intervallo specificato
+            shrinkRate = Mathf.Max(shrinkRate - shrinkRateDecrease, 0); // Diminuisci il shrinkRate ma non sotto 0
         }
     }
 
