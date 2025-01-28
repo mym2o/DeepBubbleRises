@@ -4,7 +4,7 @@ public class ChargingBubbleSpawner : MonoBehaviour
 {
     public GameObject bubblePrefab;
     public float initialSpawnRate = 2f; // Frequenza di spawn
-    public float spawnOffset = 10f; // Offset per spawnare fuori dallo schermo
+    public float spawnOffset = 10f; // Offset per spawnare dentro lo schermo
     public float screenHeight = 5f; // Altezza dello schermo in unità di mondo
     public float spawnHeightAboveBubble = 5f;
     public float spawnRateDecrease = 0.5f; // Quantità di riduzione della frequenza ogni minuto
