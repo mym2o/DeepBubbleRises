@@ -1248,6 +1248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growthRate: 1
   bubbleTag: ChargingBubble
+  sphereCollider: {fileID: 1164417266}
 --- !u!65 &1164417264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1269,6 +1270,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &1164417266 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 4464116295952081740, guid: 19a89d09765581e4cbbb9dd5fae2edab, type: 3}
+  m_PrefabInstance: {fileID: 895112390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1298490642
 PrefabInstance:
   m_ObjectHideFlags: 0
